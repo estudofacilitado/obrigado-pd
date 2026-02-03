@@ -14,6 +14,7 @@
             margin: 0;
             padding: 0;
             color: white;
+            min-height: 100vh;
         }
 
         @keyframes gradientMove {
@@ -35,21 +36,32 @@
             animation: gradientMove 3s linear infinite;
         }
 
+        .glow-green {
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+        }
+
         .progress-bar-fill {
             transition: width 2s ease-out;
             background: linear-gradient(90deg, #3b82f6, #60a5fa);
         }
 
-        #root:empty::before {
-            content: "Carregando experiência premium...";
-            position: absolute;
+        .blue-gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Diagnostic message if script fails */
+        #root:empty::after {
+            content: "Preparando sua oferta exclusiva...";
+            position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-weight: 800;
-            letter-spacing: 0.2em;
+            font-size: 0.875rem;
             text-transform: uppercase;
-            opacity: 0.5;
+            letter-spacing: 0.1em;
+            opacity: 0.4;
         }
     </style>
     <script type="importmap">
@@ -67,5 +79,7 @@
 </head>
 <body class="infinite-gradient-bg">
     <div id="root"></div>
+    <!-- O script principal DEVE ser carregado explicitamente como módulo -->
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>
