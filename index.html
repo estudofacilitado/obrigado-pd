@@ -11,7 +11,9 @@
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #05070A;
-            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            color: white;
         }
 
         @keyframes gradientMove {
@@ -24,6 +26,7 @@
             background: linear-gradient(-45deg, #05070A, #0D1117, #0a1322, #05070A);
             background-size: 400% 400%;
             animation: gradientMove 15s ease infinite;
+            min-height: 100vh;
         }
 
         .moving-green-gradient {
@@ -32,33 +35,32 @@
             animation: gradientMove 3s linear infinite;
         }
 
-        .moving-blue-gradient {
-            background: linear-gradient(90deg, #1d4ed8, #3b82f6, #60a5fa, #1d4ed8);
-            background-size: 200% auto;
-            animation: gradientMove 5s linear infinite;
-        }
-
-        .glow-green {
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
-        }
-
         .progress-bar-fill {
             transition: width 2s ease-out;
             background: linear-gradient(90deg, #3b82f6, #60a5fa);
         }
 
-        /* Smoothing scrolls and interactions */
-        html {
-            scroll-behavior: smooth;
+        #root:empty::before {
+            content: "Carregando experiência premium...";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.5;
         }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.4",
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.463.0?external=react",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+    "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
