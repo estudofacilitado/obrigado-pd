@@ -73,12 +73,10 @@ const App: React.FC = () => {
         
         {/* Headline Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-black mt-8 mb-6 leading-tight tracking-tighter italic uppercase">
-            Só <span className="text-blue-500">3% dos alunos</span> chegam até aqui.
+          <h1 className="text-4xl md:text-6xl font-black mt-8 mb-6 leading-tight tracking-tighter uppercase">
+            Só <span className="animated-blue-text">3% dos alunos</span> chegam até aqui.
           </h1>
-          <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-medium">
-            Se você está vendo isso, é porque já deu um passo que a maioria não dá.
-          </p>
+          {/* Texto removido conforme solicitado */}
         </section>
 
         {/* Congratulations Section */}
@@ -88,7 +86,7 @@ const App: React.FC = () => {
             Você garantiu o <strong>Português Descomplicado</strong>. Agora você já domina gramática, interpretação e estrutura do que realmente cai em concursos.
           </p>
           <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent w-full mb-8"></div>
-          <p className="text-xl md:text-2xl font-bold italic text-white">
+          <p className="text-xl md:text-2xl font-bold text-white">
             Mas deixa eu te fazer uma pergunta direta:
           </p>
           <p className="text-blue-400 text-2xl md:text-3xl font-black mt-4 uppercase">
@@ -122,7 +120,7 @@ const App: React.FC = () => {
               ))}
             </ul>
             <div className="bg-red-500/5 border-l-4 border-red-500 p-6 rounded-r-xl mt-8">
-              <p className="text-gray-300 italic text-center md:text-left">
+              <p className="text-gray-300 text-center md:text-left">
                 ❌ Não melhora escrevendo mais. Melhora quando alguém mostra exatamente o que corrigir.
               </p>
             </div>
@@ -134,7 +132,7 @@ const App: React.FC = () => {
           <div className="mb-6">
             <span className="text-blue-400 font-black tracking-[0.3em] uppercase text-sm">Apresentamos o Futuro</span>
           </div>
-          <h2 className="text-5xl md:text-7xl font-black italic tracking-tighter mb-10">
+          <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-10">
             MESTRE DA <span className="blue-gradient-text">REDAÇÃO</span>
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
@@ -176,25 +174,52 @@ const App: React.FC = () => {
                 <Target size={120} />
              </div>
              
-             <p className="text-gray-400 text-xl font-bold mb-4 uppercase tracking-tighter">Oferta Única para Alunos</p>
-             <p className="text-gray-500 text-2xl line-through mb-2 font-black">De R$699,90</p>
+             <p className="text-gray-400 text-xl font-bold mb-4 uppercase tracking-tighter whitespace-nowrap">Oferta Única para Alunos</p>
+             <p className="text-red-600 text-2xl line-through decoration-red-600 mb-2 font-black">De R$199,90</p>
              
-             <div className="mb-8">
+             <div className="mb-6">
                <p className="text-lg font-bold text-green-400 uppercase tracking-widest mb-2">Por apenas:</p>
-               <div className="text-7xl md:text-9xl font-black text-white tracking-tighter">
-                  R$ 69,90
+               <div className="text-7xl md:text-9xl font-black animated-green-text tracking-tighter">
+                  R$ 47
                </div>
                <div className="moving-green-gradient h-1.5 w-48 mx-auto mt-4 rounded-full"></div>
              </div>
 
-             <p className="text-gray-400 text-lg mb-10 max-w-sm mx-auto">
-               Menos que um lanche. <span className="text-white font-bold">Mais barato que errar uma redação inteira.</span>
-             </p>
+             {/* Bullet Points */}
+             <div className="flex flex-col gap-3 w-fit mx-auto mb-10 text-left">
+                <div className="flex items-center gap-3">
+                   <CheckCircle className="text-green-500 shrink-0" size={24} strokeWidth={3} />
+                   <span className="text-lg font-bold text-gray-200">2 anos de acesso</span>
+                </div>
+                <div className="flex items-center gap-3">
+                   <CheckCircle className="text-green-500 shrink-0" size={24} strokeWidth={3} />
+                   <span className="text-lg font-bold text-gray-200">Correção Ilimitada 24h</span>
+                </div>
+                <div className="flex items-center gap-3">
+                   <CheckCircle className="text-green-500 shrink-0" size={24} strokeWidth={3} />
+                   <span className="text-lg font-bold text-gray-200">Reescrita guiada</span>
+                </div>
+                <div className="flex items-center gap-3">
+                   <CheckCircle className="text-green-500 shrink-0" size={24} strokeWidth={3} />
+                   <span className="text-lg font-bold text-gray-200">Feedback completo</span>
+                </div>
+                <div className="flex items-center gap-3">
+                   <CheckCircle className="text-green-500 shrink-0" size={24} strokeWidth={3} />
+                   <span className="text-lg font-bold text-gray-200">Modelos prontos</span>
+                </div>
+                <div className="flex items-center gap-3">
+                   <CheckCircle className="text-green-500 shrink-0" size={24} strokeWidth={3} />
+                   <span className="text-lg font-bold text-gray-200">Intervenção 5E</span>
+                </div>
+                <div className="flex items-center gap-3">
+                   <CheckCircle className="text-green-500 shrink-0" size={24} strokeWidth={3} />
+                   <span className="text-lg font-bold text-gray-200">Aplicação imediata</span>
+                </div>
+             </div>
 
              <div className="space-y-6">
-                <button className="moving-green-gradient glow-green w-full max-w-xl mx-auto py-6 md:py-8 rounded-3xl text-white text-xl md:text-2xl font-black italic uppercase tracking-tighter flex items-center justify-center gap-4 hover:scale-[1.02] transition-transform duration-300 group">
+                <button className="moving-green-gradient glow-green w-full max-w-xl mx-auto py-6 md:py-8 rounded-3xl text-white text-xl md:text-2xl font-black uppercase tracking-tighter flex items-center justify-center hover:scale-[1.02] transition-transform duration-300 group">
                    Aproveitar esta oferta agora
-                   <ArrowRight size={28} className="group-hover:translate-x-2 transition-transform" />
                 </button>
                 <p className="text-green-400 text-[10px] md:text-xs font-bold uppercase tracking-widest">
                   (Adicionar o Mestre da Redação ao meu acesso)
